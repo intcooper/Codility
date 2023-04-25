@@ -6,23 +6,26 @@
  */
 #include <string>
 
-int solution(std::string &S) {
-  if (S.size() == 0)
-    return -1;
+int solution(std::string& S)
+{
+    if (S.size() == 0)
+        return -1;
 
-  if (S.size() == 1)
-    return 0;
+    if (S.size() == 1)
+        return 0;
 
-  if (S.size() % 2 == 0)
-    return -1;
+    if (S.size() % 2 == 0)
+        return -1;
 
-  int index = S.size() / 2;
+    int index = S.size() / 2;
 
-  for (size_t i = 0; i < S.size() / 2; ++i) {
-    if (*std::next(S.begin(), i) != *std::next(S.rbegin(), i)) {
-      return -1;
+    for (size_t i = 0; i < S.size() / 2; ++i)
+    {
+        if (*std::next(S.begin(), i) != *std::next(S.rbegin(), i))
+        {
+            return -1;
+        }
     }
-  }
 
-  return index;
+    return index;
 }
