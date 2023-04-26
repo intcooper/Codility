@@ -35,4 +35,6 @@ int solution(int A, int B)
         ++q;
         square = q * q;
     }
+
+    return count;
 }

@@ -2,6 +2,7 @@
  * @file BinaryGap.cpp
  * @brief Find longest sequence of zeros in binary representation of an integer.
  */
+#include <algorithm>
 
 int solution(int N)
 {
